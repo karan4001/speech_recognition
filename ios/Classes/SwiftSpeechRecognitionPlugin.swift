@@ -104,7 +104,7 @@ public class SwiftSpeechRecognitionPlugin: NSObject, FlutterPlugin, SFSpeechReco
     cancelRecognition(result: nil)
 
     let audioSession = AVAudioSession.sharedInstance()
-    try audioSession.setCategory(AVAudioSessionCategoryRecord)
+    try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
     try audioSession.setMode(AVAudioSessionModeMeasurement)
     try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
 
