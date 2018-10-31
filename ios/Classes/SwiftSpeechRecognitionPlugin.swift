@@ -94,10 +94,8 @@ public class SwiftSpeechRecognitionPlugin: NSObject, FlutterPlugin, SFSpeechReco
   }
 
   private func stopRecognition(result: FlutterResult) {
-    if audioEngine.isRunning {
-      audioEngine.stop()
-      recognitionRequest?.endAudio()
-    }
+    audioEngine.stop()
+    recognitionRequest?.endAudio()
     result(false)
   }
 
